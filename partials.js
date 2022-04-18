@@ -8,7 +8,7 @@ function setFavicons(favImg){
 setFavicons('https://sites.google.com/site/sklplfiles/files/sklico.png');
 
 
-fetch("/partials/head.html")
+/*fetch("/partials/head.html")
 .then(response => {
   return response.text()
 })
@@ -39,5 +39,8 @@ fetch("/partials/right.html")
 })
 .then(data => {
   document.querySelector("aside").innerHTML = data;
-});
-
+});*/
+$("header").load("/partials/header.html")
+$("head").load("/partials/head.html")
+$("footer").load("/partials/footer.html")
+importScripts('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js')
