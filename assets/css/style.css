@@ -1,17 +1,17 @@
-
-
-  @font-face {
+@font-face {
     font-family: 'csans';
     src: url(/assets/fonts/GoogleSans-Regular.ttf);
     font-weight: normal;
     font-style: normal;
-    }
-    @font-face {
+}
+
+@font-face {
     font-family: 'csans';
     src: url(/assets/fonts/GoogleSans-Bold.ttf);
     font-weight: bold;
     font-style: normal;
-    }
+}
+
 body {
     margin: 0 auto;
     font-family: csans, google sans, Arial, Helvetica, sans-serif;
@@ -19,7 +19,15 @@ body {
     font-size: 17.5px;
     color: #444;
 }
+#topcontrol {
+    position: absolute;
+    z-index: 15000;
+}
 
+#topcontrol:hover {
+    filter: grayscale(100%);
+    transition: all .3s;
+}
 body.marata {
     background: #fff;
 }
@@ -33,42 +41,54 @@ body.marata {
     background: #333;
     border-top: 2px solid #676767;
     display: none;
-  }
-  .dropm-in {
+}
+
+.dropm-in {
     display: flex;
     gap: 20px;
     max-width: 1300px;
     margin: 0 auto;
     padding: 15px 15px 30px 15px;
-  }
-  .dcat {
+}
+
+.dcat {
     background: transparent;
     width: 100%;
     color: #eee;
-  }
-  .etitle {
+}
+
+.etitle {
     display: flex;
     align-items: center;
     padding: 10px;
     background: #444;
     border-radius: 4px;
-  }
-  .etitle span {
+}
+
+.etitle span {
     margin-left: 10px;
     font-size: 20px;
-  }
-  .labcat a {
+}
+
+.labcat a {
     display: block;
     color: #eee;
     text-decoration: none;
     padding: 10px;
     transition: 0.2s;
-  }
-  .labcat a:hover {
+}
+
+.labcat a:hover {
     background: #676767;
     border-radius: 4px;
-  }
- .pnum2, .pnum3, .pnum4 {display: none;}
+}
+
+.pnum2,
+.pnum3,
+.pnum4 {
+    display: none;
+}
+
 .stitle {
     font-size: 25px;
     font-weight: 800;
@@ -80,50 +100,54 @@ body.marata {
     font-weight: 800;
 }
 
-    .hide p {
-        display: none !important;
-    }
-    .bgblack {
-        position: fixed;
-        top: 70px;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        background: rgb(0 0 0 / 94%);
-        display: none;
-        z-index: -2;
-    }
-    .hide a {
-        padding: 15px 15px 15px 80px;
-        border: 2px solid #eee;
-        text-decoration: none;
-        display: flex;
-        color: #444;
-       position: relative;
-        align-items: center;
-        border-radius: 4px;
-        height: 50px;
-        /* background: #eee; */
-    }
-    .hide {
-        max-width: 1300px;
-        margin: 180px auto;
-        columns: 2;
-        display: none;
-        display: grid;
+.hide p {
+    display: none !important;
+}
+
+.bgblack {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: rgb(0 0 0 / 94%);
+    display: none;
+    z-index: -2;
+}
+
+.hide a {
+    padding: 15px 15px 15px 80px;
+    border: 2px solid #eee;
+    text-decoration: none;
+    display: flex;
+    color: #444;
+    position: relative;
+    align-items: center;
+    border-radius: 4px;
+    height: 50px;
+    /* background: #eee; */
+}
+
+.hide {
+    max-width: 1300px;
+    margin: 180px auto;
+    columns: 2;
+    display: none;
+    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     grid-gap: 18px;
-    }
-    .hide a:hover {
-        background: #ddd;
-        border: 2px solid #ddd;
-        
-    }
-    /*hide a::before {
+}
+
+.hide a:hover {
+    background: #ddd;
+    border: 2px solid #ddd;
+}
+
+/*hide a::before {
         width: 50px;
         height: 50px;
         background-size: 50px 50px;
@@ -134,24 +158,27 @@ body.marata {
         position: absolute;
     left: 15px;
     }*/
-    @media only screen and (max-width:770px) {
-        .hide a {
-            font-size: 16px;
-            padding: 15px;
-            margin-right: 0;
-        }
-        
-        .hide {
-            border: 0;
-            border-bottom: 0px solid #444;
-            margin: 65px auto;
-            border-radius: 0px;
-        }
-        .hide a::before {}
-        ::-webkit-scrollbar {
-            -webkit-appearance: inerhit;
-        }
+@media only screen and (max-width:770px) {
+    .hide a {
+        font-size: 16px;
+        padding: 15px;
+        margin-right: 0;
     }
+
+    .hide {
+        border: 0;
+        border-bottom: 0px solid #444;
+        margin: 65px auto;
+        border-radius: 0px;
+    }
+
+    .hide a::before {}
+
+    ::-webkit-scrollbar {
+        -webkit-appearance: inerhit;
+    }
+}
+
 ::-webkit-scrollbar {
     -webkit-appearance: none;
 }
@@ -175,7 +202,6 @@ body.marata {
     border-radius: 10px;
     background-color: #ffffff;
 }
-
 
 .marata .pagination a:nth-child(n+15):nth-child(-n+24) {
     display: none;
@@ -244,7 +270,7 @@ body a:hover {
 }
 
 .logopl a {
-    background-image: url(media/svg/skllogo-white.svg);
+    background-image: url(/media/svg/skllogo-white.svg);
     background-size: 100%;
     background-repeat: no-repeat;
     width: 267px;
@@ -255,8 +281,6 @@ body a:hover {
     bottom: 0;
     margin: 0 auto
 }
-
-
 
 #logopl img {
     width: 266px;
@@ -274,7 +298,6 @@ body a:hover {
     bottom: 0;
     border-left: 1px solid #888;
     padding: 12px 0 0 10px;
-
 }
 
 .labels a {
@@ -293,7 +316,6 @@ body a:hover {
     font-size: 18px;
     background-color: #f37920;
     border-radius: 4px;
-
 }
 
 .labels a:hover,
@@ -325,10 +347,7 @@ body a:hover {
     font-size: 18px;
     background-color: #1484b1;
     border-radius: 4px;
-
 }
-
-
 
 .cats img {
     width: 21px;
@@ -336,30 +355,28 @@ body a:hover {
     margin-right: 10px
 }
 
-.find {
-    
-}
+.find {}
 
 .find a {
-       position: absolute;
-       left: auto;
-       padding: 10px 30px;
-       color: #fff;
-       display: flex;
-       align-items: center;
-       margin: auto;
-       right: 65px;
-       top: 0;
-       bottom: 0;
-       text-decoration: none;
-       background-color: #d91a32;
-       border-radius: 4px;
-       font-weight: 700;
-       font-size: 18px;
-       letter-spacing: -0.3px;
-       width: auto;
-       justify-content: center;
-       border: 0px solid #777;
+    position: absolute;
+    left: auto;
+    padding: 10px 30px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    right: 65px;
+    top: 0;
+    bottom: 0;
+    text-decoration: none;
+    background-color: #d91a32;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.3px;
+    width: auto;
+    justify-content: center;
+    border: 0px solid #777;
 }
 
 .find a:hover {
@@ -386,10 +403,7 @@ body a:hover {
     margin: auto;
     color: #333;
     border: 0px solid #777;
-
 }
-
-
 
 #searchopen {
     display: none;
@@ -400,18 +414,19 @@ body a:hover {
 }
 
 .fakos {
-        background-image: url(media/SVG/fakos.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 30px 25px;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        left: auto;
-        opacity: 1;
-        filter: brightness(1.5);
-        right: 0px;
+    background-image: url(media/SVG/fakos.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30px 25px;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: auto;
+    opacity: 1;
+    filter: brightness(1.5);
+    right: 0px;
 }
+
 .fakos2 {
     width: 24px;
     position: absolute;
@@ -422,6 +437,7 @@ body a:hover {
     height: 24px;
     cursor: pointer;
 }
+
 input.stext {
     outline: none;
     border: none;
@@ -443,7 +459,6 @@ input.stext2 {
     position: absolute;
     background-color: #eeeeee;
     /* left: 15px; */
-
     margin: auto;
     right: 50pxpx;
     top: 0;
@@ -570,8 +585,6 @@ a:hover.cat {
     clear: both;
     font-weight: bold;
     margin-top: 2px;
-    
-    
 }
 
 .alltext {
@@ -638,7 +651,7 @@ svg text {
     height: 40px;
     padding: 0px;
     width: 50%;
-    border-radius:  4px 0 0 0;
+    border-radius: 4px 0 0 0;
 }
 
 #barimage {
@@ -647,7 +660,6 @@ svg text {
     float: left;
     height: 40px;
     width: 40px;
-    
 }
 
 #barimage img {
@@ -677,7 +689,6 @@ svg text {
     height: 40px;
     padding: 0px;
     width: 50%;
-    
 }
 
 #varosimage {
@@ -698,7 +709,6 @@ svg text {
     background-size: 19px 22px;
     background-repeat: no-repeat;
     background-position: center;
-    
 }
 
 #varosimage1 {
@@ -851,7 +861,6 @@ a:hover.pcategory {
     font-size: 17.5px;
     min-width: 700px;
 }
-}
 
 #diatable p {
     margin: 0;
@@ -864,24 +873,22 @@ a:hover.pcategory {
     text-align: center;
     color: white;
     text-shadow: 0px 0px 0px black;
-   
 }
 
 #diatable td {
     background: #eee;
     padding: 10px 15px;
     border: 1px solid white;
-
 }
 
 #diatable tr:last-child td {
-    border-bottom: 0 border-right: 0;
+    border-bottom: 0;
+    border-right: 0;
 }
 
 #diatable tr th {
     border-right: 0;
     border-top: 0;
-  
 }
 
 #diatable tr td:first-child,
@@ -891,7 +898,6 @@ a:hover.pcategory {
 
 #diatable tr td {
     border-right: 0;
-     
 }
 
 #diatable tr td {
@@ -936,7 +942,6 @@ a:hover.pcategory {
     border: 2px solid #eee;
     z-index: 1;
     position: relative;
-}
 }
 
 .pimg {
@@ -987,12 +992,9 @@ a:hover.pcategory {
     left: 15px;
     width: auto;
     height: 100%;
-   
     display: none;
-    
     margin: 0 auto;
     z-index: 2;
-
 }
 
 .pimg2bg {
@@ -1066,16 +1068,13 @@ a:hover.pcategory {
     border-radius: 0;
     margin-bottom: 27px;
 }
+
 .cattitle b {
-
-
     border-radius: 4px;
     background: #d91a32;
     color: #ffffff;
     margin-right: 5px;
-
     display: inline-block;
-
     padding: 5px 20px;
 }
 
@@ -1100,8 +1099,6 @@ a:hover.pcategory {
     max-width: 350px;
     margin: auto;
 }
-
-
 
 .explist a {
     text-decoration: none;
@@ -1305,23 +1302,25 @@ footer {
     padding: 15px;
     margin-bottom: -15px !important;
 }
+
 .pagination {
     width: 100%;
     margin: 15px 0 120px 0px;
 }
+
 .pagination1 {
-    
     overflow: auto;
     margin: 0 auto !important;
-    
     width: auto;
     display: flex;
     align-items: flex-start;
 }
+
 .pagination2.pagination {
     margin-top: 20px;
     position: initial;
 }
+
 .pagination {
     width: 100%;
     margin-top: -57px;
@@ -1332,9 +1331,11 @@ footer {
 .pagination a:last-child {
     display: block;
 }
+
 .pnext {
-    font-size:23px;
+    font-size: 23px;
 }
+
 .pagination a {
     color: black;
     float: left;
@@ -1352,6 +1353,7 @@ footer {
     border: 2px solid #ddd;
     cursor: pointer;
 }
+
 .pagination1 p {
     float: right;
     text-align: center;
@@ -1364,9 +1366,10 @@ footer {
     padding: 0 15px;
     font-size: 15px;
     background: #eee;
-    position: ;
+    position: unset;
     right: 120px;
 }
+
 .pagination p {
     float: right;
     text-align: center;
@@ -1467,7 +1470,6 @@ r {
 .smez img {
     position: relative;
     width: 100%;
-
 }
 
 .smez span {
@@ -1510,7 +1512,7 @@ r {
 .wtab3 div {
     display: table-cell;
     padding: 10px 15px;
-    background: ;
+    background: unset;
     width: auto;
     text-align: center;
     vertical-align: middle;
@@ -1571,8 +1573,6 @@ r {
     margin-right: 8px;
 }
 
-
-
 .wtab div:nth-child(4) img {
     opacity: .5;
 }
@@ -1625,16 +1625,9 @@ div#disqus_thread {
     }
 
     .wrapper {
-
         margin: 75px auto;
-
-    }
-
-    .find {
-     
     }
 }
-
 
 @media only screen and (max-width:770px) {
     .product {
@@ -1688,20 +1681,16 @@ div#disqus_thread {
         display: none;
     }
 
-
-
     .searchpl2 {
         display: none;
         width: 100%;
         height: 50px;
-
         margin: 0px auto;
         position: absolute;
         background-color: rgba(0, 0, 0, 0.8);
         top: 70px;
         z-index: 8;
     }
-
 }
 
 @media only screen and (max-width:700px) {
@@ -1736,42 +1725,37 @@ div#disqus_thread {
         max-width: 700px;
     }
 }
-    @media only screen and (max-width: 444px) {
-        .logopl a {
-            height: 46px;
-            width: 250px;
-            background-size: 100%;
-            background-position: left center;
-        }
 
-
+@media only screen and (max-width: 444px) {
+    .logopl a {
+        height: 46px;
+        width: 250px;
+        background-size: 100%;
+        background-position: left center;
     }
+}
 
-    @media only screen and (max-width:400px) {
-        .logopl a {
-            width: 215px;
-
-        }
+@media only screen and (max-width:400px) {
+    .logopl a {
+        width: 215px;
     }
+}
 
-    @media only screen and (max-width:358px) {
-        .logopl a {
-            width: 175px;
-
-
-
-            background-size: 100%;
-        }
+@media only screen and (max-width:358px) {
+    .logopl a {
+        width: 175px;
+        background-size: 100%;
     }
+}
 
-    .cflex,
-    .cflex2 {
-        display: flex;
-        align-items: center;
-    }
+.cflex,
+.cflex2 {
+    display: flex;
+    align-items: center;
+}
 
-    .promo ul {
-        padding: 20px 40px;
+.promo ul {
+    padding: 20px 40px;
     color: #333;
     background: #f6f6f6;
     border-left: 4px solid #ddd;
@@ -1779,165 +1763,156 @@ div#disqus_thread {
     font-size: 12pt;
     line-height: 21px;
     border-radius: 6px;
-
-    }
-
-    .colall {
-        text-align: center;
-        display: block;
-        margin: 30px auto;
-        color: #000;
-        padding: 0px;
-    }
-
-    .colall a {
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 20px;
-       border-radius: 4px;
-        background: #FF5722;
-        padding: 10px 20px;
-        border: 0px solid #eee;
-    }
-
-    .colall a:hover {
-        background: #da1a33;
-        border: 0px solid #FF5722;
-        color: #fff;
-    }
-
-
-
-    
-
-    .catwrap #scat2 {
-        background: #fff;
-        padding: 20px;
-        color: #666;
-        font-size: 30px;
-        font-weight: 300;
-        letter-spacing: -1px;
-        text-align: center;
-        border: none;
-        margin-top: 0px;
-        border-top: 2px solid #dadada;
-    }
-
-#col1 a i {float: right; position: relative; top: 2px;  color: #fff;}
-
-
-    .catwrap #catmenu {
-        width: auto;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-gap: 10px;
-        background: transparent;
-        padding: 20px 15px;
-        border: none;
-        max-width: 1300px;
-
-        margin: auto;
-    }
-
-    .catwrap {
-        background: #fff;
-        padding: 0px;
-        margin: 0px auto 0px auto;
-        padding-bottom: 20px;
-    }
-
-    .catwrap #col1 {
-        width: auto;
-        display: inline-block;
-          
-            
-
-    }
-
-    .catwrap #col1 a {
-        color: #444;
-        text-decoration: none;
-        padding: 15px;
-        display: block;
-        border-radius: 4px;
-        background: #efdcca;
-    }
-
-    .catwrap #col1 a:hover {
-        color: #eee;
-        text-decoration: none;
-
-        display: block;
-        background: #666;
-    }
-
-@media only screen and (max-width: 1046px) {
-    
-    
 }
-    @media only screen and (max-width: 1233px) {
-        .cats a, .labels a {display: none;}
 
-        .cflex {
-            flex-flow: column-reverse;
-        }
+.colall {
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    color: #000;
+    padding: 0px;
+}
 
-        .cflex img {
-            padding: 20px 0 !important;
-        }
+.colall a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 4px;
+    background: #FF5722;
+    padding: 10px 20px;
+    border: 0px solid #eee;
+}
 
-        .cflex2 {
-            flex-flow: column;
-        }
+.colall a:hover {
+    background: #da1a33;
+    border: 0px solid #FF5722;
+    color: #fff;
+}
 
-        .cflex2 img {
-            padding: 20px 0 !important;
-        }
+.catwrap #scat2 {
+    background: #fff;
+    padding: 20px;
+    color: #666;
+    font-size: 30px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    text-align: center;
+    border: none;
+    margin-top: 0px;
+    border-top: 2px solid #dadada;
+}
+
+#col1 a i {
+    float: right;
+    position: relative;
+    top: 2px;
+    color: #fff;
+}
+
+.catwrap #catmenu {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+    background: transparent;
+    padding: 20px 15px;
+    border: none;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.catwrap {
+    background: #fff;
+    padding: 0px;
+    margin: 0px auto 0px auto;
+    padding-bottom: 20px;
+}
+
+.catwrap #col1 {
+    width: auto;
+    display: inline-block;
+}
+
+.catwrap #col1 a {
+    color: #444;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    border-radius: 4px;
+    background: #efdcca;
+}
+
+.catwrap #col1 a:hover {
+    color: #eee;
+    text-decoration: none;
+    display: block;
+    background: #666;
+}
+
+@media only screen and (max-width: 1046px) {}
+
+@media only screen and (max-width: 1233px) {
+
+    .cats a,
+    .labels a {
+        display: none;
     }
 
+    .cflex {
+        flex-flow: column-reverse;
+    }
+
+    .cflex img {
+        padding: 20px 0 !important;
+    }
+
+    .cflex2 {
+        flex-flow: column;
+    }
+
+    .cflex2 img {
+        padding: 20px 0 !important;
+    }
+}
 
 @media only screen and (max-width: 878px) {
     .catwrap {
         margin: 0px auto;
     }
+}
 
+@media only screen and (max-width: 760px) {
+    .catwrap #col1 {
+        display: inline-block;
+        width: auto;
     }
-  
-    @media only screen and (max-width: 760px) {
-        .catwrap #col1 {
+}
 
-            display: inline-block;
-              
-            width: auto;
-        }
-
+@media only screen and (max-width: 614px) {
+    span.page {
+        display: none;
     }
-    @media only screen and (max-width: 614px) {
-        span.page {
-            display: none; 
-        }
-    
-        }
-    
-        @media only screen and (max-width: 560px) {
-            .pagination1 p {
-                display: none; 
-            }
-        
-            }
-            @media only screen and (max-width: 462px) {
-                .pagination a {
-                    width: 25px;
-            
-                }
-            }  
-            @media only screen and (max-width: 367px) {
-                .pagination2 p {
-                    padding: 0 10px;
-            
-                }
-            }            
-            html {
-                scroll-behavior: smooth;
-                }
+}
+
+@media only screen and (max-width: 560px) {
+    .pagination1 p {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 462px) {
+    .pagination a {
+        width: 25px;
+    }
+}
+
+@media only screen and (max-width: 367px) {
+    .pagination2 p {
+        padding: 0 10px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
